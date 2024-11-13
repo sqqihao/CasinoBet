@@ -2,6 +2,7 @@
   "name": "casino",
   "version": "0.1.0",
   "private": true,
+  "homepage": "CasinoBet/frontend%E9%9D%99%E6%80%81%E7%95%8C%E9%9D%A2/build/",
   "dependencies": {
     "@ant-design/icons": "^5.5.1",
     "@rainbow-me/rainbowkit": "^2.2.0",
