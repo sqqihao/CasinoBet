@@ -33,10 +33,10 @@ function Side(){
 			Roulette
 		</Link>
 		,
-	  	<Link to="/Setting" onClick={() => handleClick(2)}>
+	  	<Link to="/Setup" onClick={() => handleClick(2)}>
 			<SettingOutlined />
 			&nbsp;
-			setting
+			Setup
 		</Link>
 	];
 	//
