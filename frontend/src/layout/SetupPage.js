@@ -4,17 +4,18 @@ import { BrowserRouter as Router,Link } from 'react-router-dom'
 import { Routes, Route } from 'react-router-dom'
 import { Switch ,Input,Button} from "antd";
 import React, { useState,useEffect } from 'react';
-import {useLocalStorageState} from "../model/store.js"
+import {useLocalStorageState,getTheme,setTheme} from "../model/store.js"
 import {Init,initTheme} from "./Init.js"
 
 
 function SetupPage(){
-	const [theme, setTheme] = useLocalStorageState("theme",{theme:true});
-	const [switchChecked, setSwitchChecked] = useLocalStorageState();
+	// const [theme, setTheme] = useLocalStorageState("theme",true);
+	const [switchChecked, setSwitchChecked] = useState(getTheme()=="true"?true:false);
 	
 	const onChange = (checked) => {
 		setSwitchChecked(checked);
-		setTheme({theme:checked});
+		// setTheme(checked);
+		setTheme(checked);
 		initTheme();
 	};
 
@@ -39,7 +40,7 @@ function SetupPage(){
 
 	      </Col>
 	      <Col span={24}>
-	          颜色模式<Switch checkedChildren="默认" unCheckedChildren="暗黑" checked={theme.theme}  onChange={onChange} />
+	          颜色模式<Switch checkedChildren="默认" unCheckedChildren="暗黑" checked={switchChecked}  onChange={onChange} />
 	      </Col>
 	    </Row>
 	  </>
