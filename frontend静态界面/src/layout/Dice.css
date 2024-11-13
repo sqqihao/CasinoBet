@@ -1,0 +1,71 @@
+.dice-wrap{
+	margin: 20px;
+}
+.dice{
+	background-image:url("../imgs/Dice.svg");
+	width: 64px;
+    height: 64px;
+    background-size: cover;
+}
+.dice1{
+	background-position: 0 0;
+}
+.dice2{
+	background-position: -64px 0;
+}
+.dice3{
+	background-position: -128px 0;
+}
+.dice4{
+	background-position: -192px 0;
+}
+.dice5{
+	background-position: -256px 0;
+}
+.dice6{
+	background-position: -320px 0;
+}
+.dices-box,.Roulette-box{
+	margin:40px 10px;
+	padding:40px;
+	background:#fff;
+}
+.dices-input,.Roulette-input{
+	margin:40px 10px;
+	padding:40px 20px;
+	background:#fff;
+}
+.dice-history{
+	margin:40px 10px;
+	padding:20px;
+	background:#fff;	
+}
+.textcenter,input{
+  text-align: center!important
+}
+.mg20{
+	margin:20px;
+}
+.bet-amount-btns button,.Roulette-bet-amount-btns button{
+	margin:4px;
+}
+.Roulette-buttons button{
+	padding:4px 40px;
+}
+.wheel-sheath{
+	position: relative;;
+	width: 700px;
+	height: 64px;
+}
+.wheel{
+	height: 64px;
+}
+.mark{
+	position: absolute;
+	left:50%;
+	top:0;
+	margin-left:-3px;
+	height: 64px;
+	width:6px;
+	background:#796969;
+}

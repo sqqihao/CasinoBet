@@ -1,0 +1,9 @@
+.transferDialog{
+	text-align:center;
+}
+.lh52{
+	line-height: 52px;
+}
+.transferDialog input,.transferDialog button{
+	margin:10px;
+}

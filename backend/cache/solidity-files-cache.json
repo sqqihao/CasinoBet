@@ -1,0 +1,573 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/Users/mac/Desktop/solidity/casino-lotery/backend/contracts/Bank.sol": {
+      "lastModificationDate": 1731377868106,
+      "contentHash": "0634a8255fde618684bc247372ba2980",
+      "sourceName": "contracts/Bank.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/access/extensions/AccessControlEnumerable.sol",
+        "@openzeppelin/contracts/access/Ownable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Bank",
+        "IBank"
+      ]
+    },
+    "/Users/mac/Desktop/solidity/casino-lotery/backend/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
+      "lastModificationDate": 1731378128803,
+      "contentHash": "d3c790edc9ccf808a17c5a6cd13614fd",
+      "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Ownable"
+      ]
+    },
+    "/Users/mac/Desktop/solidity/casino-lotery/backend/node_modules/@openzeppelin/contracts/access/extensions/AccessControlEnumerable.sol": {
+      "lastModificationDate": 1731378128805,
+      "contentHash": "1c84b21784d3a96d315197cae2050f89",
+      "sourceName": "@openzeppelin/contracts/access/extensions/AccessControlEnumerable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IAccessControlEnumerable.sol",
+        "../AccessControl.sol",
+        "../../utils/structs/EnumerableSet.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "AccessControlEnumerable"
+      ]
+    },
+    "/Users/mac/Desktop/solidity/casino-lotery/backend/node_modules/@openzeppelin/contracts/utils/Context.sol": {
+      "lastModificationDate": 1731378128850,
+      "contentHash": "67bfbc07588eb8683b3fd8f6f909563e",
+      "sourceName": "@openzeppelin/contracts/utils/Context.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Context"
+      ]
+    },
+    "/Users/mac/Desktop/solidity/casino-lotery/backend/node_modules/@openzeppelin/contracts/access/AccessControl.sol": {
+      "lastModificationDate": 1731378128819,
+      "contentHash": "4c80b7fdf559a9a348e832a57d072a0b",
+      "sourceName": "@openzeppelin/contracts/access/AccessControl.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IAccessControl.sol",
+        "../utils/Context.sol",
+        "../utils/introspection/ERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "AccessControl"
+      ]
+    },
+    "/Users/mac/Desktop/solidity/casino-lotery/backend/node_modules/@openzeppelin/contracts/utils/structs/EnumerableSet.sol": {
+      "lastModificationDate": 1731378128844,
+      "contentHash": "872d28bbdd394a6754df33e82eaf1474",
+      "sourceName": "@openzeppelin/contracts/utils/structs/EnumerableSet.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "EnumerableSet"
+      ]
+    },
+    "/Users/mac/Desktop/solidity/casino-lotery/backend/node_modules/@openzeppelin/contracts/access/extensions/IAccessControlEnumerable.sol": {
+      "lastModificationDate": 1731378128804,
+      "contentHash": "db2f5c4a4b96c637a30f05aba27464b3",
+      "sourceName": "@openzeppelin/contracts/access/extensions/IAccessControlEnumerable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../IAccessControl.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IAccessControlEnumerable"
+      ]
+    },
+    "/Users/mac/Desktop/solidity/casino-lotery/backend/node_modules/@openzeppelin/contracts/utils/introspection/ERC165.sol": {
+      "lastModificationDate": 1731378128834,
+      "contentHash": "7c03c1e37c3dc24eafb76dc2b8a5c3a6",
+      "sourceName": "@openzeppelin/contracts/utils/introspection/ERC165.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ERC165"
+      ]
+    },
+    "/Users/mac/Desktop/solidity/casino-lotery/backend/node_modules/@openzeppelin/contracts/access/IAccessControl.sol": {
+      "lastModificationDate": 1731378128816,
+      "contentHash": "6f7fac9fa0df6004375e18b7ff7edf4e",
+      "sourceName": "@openzeppelin/contracts/access/IAccessControl.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IAccessControl"
+      ]
+    },
+    "/Users/mac/Desktop/solidity/casino-lotery/backend/node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+      "lastModificationDate": 1731378128834,
+      "contentHash": "bf0119eb2a570f219729ff38b6cd1df8",
+      "sourceName": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC165"
+      ]
+    },
+    "/Users/mac/Desktop/solidity/casino-lotery/backend/contracts/Roulette.sol": {
+      "lastModificationDate": 1731378194186,
+      "contentHash": "9f085174a9d3b5de808697ce99280b30",
+      "sourceName": "contracts/Roulette.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "./Bank.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Roulette"
+      ]
+    },
+    "/Users/mac/Desktop/solidity/casino-lotery/backend/contracts/ChuckALuck.sol": {
+      "lastModificationDate": 1731378174144,
+      "contentHash": "5641615f1eaee7a7447e2220cda64bef",
+      "sourceName": "contracts/ChuckALuck.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@chainlink/contracts/src/v0.8/vrf/VRFConsumerBase.sol",
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "./Bank.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ChuckALuck"
+      ]
+    },
+    "/Users/mac/Desktop/solidity/casino-lotery/backend/node_modules/@chainlink/contracts/src/v0.8/vrf/VRFConsumerBase.sol": {
+      "lastModificationDate": 1731378118747,
+      "contentHash": "1caa33b3ba2b08a41a92427d6429e4f8",
+      "sourceName": "@chainlink/contracts/src/v0.8/vrf/VRFConsumerBase.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../shared/interfaces/LinkTokenInterface.sol",
+        "./VRFRequestIDBase.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "VRFConsumerBase"
+      ]
+    },
+    "/Users/mac/Desktop/solidity/casino-lotery/backend/node_modules/@chainlink/contracts/src/v0.8/shared/interfaces/LinkTokenInterface.sol": {
+      "lastModificationDate": 1731378118332,
+      "contentHash": "2bad029d4994ec16b93df2e46955d37f",
+      "sourceName": "@chainlink/contracts/src/v0.8/shared/interfaces/LinkTokenInterface.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "LinkTokenInterface"
+      ]
+    },
+    "/Users/mac/Desktop/solidity/casino-lotery/backend/node_modules/@chainlink/contracts/src/v0.8/vrf/VRFRequestIDBase.sol": {
+      "lastModificationDate": 1731378118643,
+      "contentHash": "647370c8808aa5ea8c36aab8cfcaddcc",
+      "sourceName": "@chainlink/contracts/src/v0.8/vrf/VRFRequestIDBase.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "VRFRequestIDBase"
+      ]
+    }
+  }
+}
