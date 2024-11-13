@@ -4,7 +4,7 @@ import { BrowserRouter as Router,Link } from 'react-router-dom'
 import { Routes, Route } from 'react-router-dom'
 import Dice from "./Dice.js"
 import Roulette from "./Roulette.js"
-import Setup from "./Setup.js"
+import SetupPage from "./SetupPage.js"
 
 
 function Cont(){
@@ -15,7 +15,7 @@ function Cont(){
 				<Route path="/" element={<Dice/>} />
 				<Route path="/Dice" element={<Dice/>} />
 				<Route path="/Roulette" element={<Roulette/>} />
-				<Route path="/Setup" element={<Setup/>} />
+				<Route path="/SetupPage" element={<SetupPage/>} />
 				
 			</Routes>
 		</div>
