@@ -38,6 +38,10 @@ async function main() {
   const rouletteAddr = await roulette.getAddress();
   console.log("roulette contract address: "+rouletteAddr);
 
+  //允许访问Bank修改余额
+  await centralBank.setAllowCaller(chuckALuckAddr);
+  await centralBank.setAllowCaller(rouletteAddr);
+
   let data = {
     address: rouletteAddr,
     abi: roulette.interface.format('json')

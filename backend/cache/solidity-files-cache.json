@@ -380,8 +380,8 @@
       ]
     },
     "/Users/mac/Desktop/solidity/casino-lotery/backend/contracts/Roulette.sol": {
-      "lastModificationDate": 1731378194186,
-      "contentHash": "9f085174a9d3b5de808697ce99280b30",
+      "lastModificationDate": 1731633406422,
+      "contentHash": "b12ee49dd5756faf909aac3f1b9b8d9f",
       "sourceName": "contracts/Roulette.sol",
       "solcConfig": {
         "version": "0.8.20",
@@ -419,8 +419,8 @@
       ]
     },
     "/Users/mac/Desktop/solidity/casino-lotery/backend/contracts/ChuckALuck.sol": {
-      "lastModificationDate": 1731378174144,
-      "contentHash": "5641615f1eaee7a7447e2220cda64bef",
+      "lastModificationDate": 1731583509977,
+      "contentHash": "32522f657b7e0e8410044daceee70fab",
       "sourceName": "contracts/ChuckALuck.sol",
       "solcConfig": {
         "version": "0.8.20",

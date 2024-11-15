@@ -1,10 +1,10 @@
 import React, { useState,useEffect } from 'react';
 
 
-export function useLocalStorageState(key, defaultValue) {
+export function useLocalStorageState(key) {
   const [state, setState] = useState(() => {
-    const savedValue = localStorage.getItem(key) || defaultValue;
-    return  Boolean(savedValue);
+    const savedValue = localStorage.getItem(key)
+    return savedValue
   });
 
   useEffect(() => {

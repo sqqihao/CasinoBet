@@ -7,14 +7,17 @@ import Roulette from "./Roulette.js"
 import SetupPage from "./SetupPage.js"
 
 
-function Cont(){
-
+function Cont(props){
+	const placeBet = props.placeBet;
+	const rolleds = props.rolleds;
+	const placeBetRoulette = props.placeBetRoulette;
+	const refreshUserBalance = props.refreshUserBalance;
 	return (
 		<div>
 			<Routes >
-				<Route path="/" element={<Dice/>} />
-				<Route path="/Dice" element={<Dice/>} />
-				<Route path="/Roulette" element={<Roulette/>} />
+				<Route path="/" element={<Dice placeBet={placeBet} />} />
+				<Route path="/Dice" element={<Dice placeBet={placeBet} rolleds={rolleds} refreshUserBalance={refreshUserBalance} />} />
+				<Route path="/Roulette" element={<Roulette placeBetRoulette={placeBetRoulette} refreshUserBalance={refreshUserBalance}/>} />
 				<Route path="/SetupPage" element={<SetupPage/>} />
 				
 			</Routes>

@@ -14,11 +14,17 @@ contract ChuckALuck is VRFConsumerBase{
     event WinFund(address addr,uint256 amounts);
     // Bet[] bets;
     mapping(bytes32=>Bet) public bets;
+    uint256[][] public rolleds;
 
     Bank public bank;
     bytes32 internal _keyHash;
     uint internal _fee;
-
+    function getRolledCount() public view returns (uint256){
+        return rolleds.length;
+    }
+    function getRoll(uint256 _index) public view returns(uint256,uint256,uint256){
+        return (rolleds[_index][0],rolleds[_index][1],rolleds[_index][2]);
+    }
     
     constructor(address vrfCoordinator, address linkToken, bytes32 keyHash, uint fee, address _addr) VRFConsumerBase(vrfCoordinator, linkToken) {
         _keyHash = keyHash;
@@ -38,7 +44,7 @@ contract ChuckALuck is VRFConsumerBase{
             _bet_num,
             _bet_amounts);
             
-        //需要对接chainlink的话把 bytes32 req和  fulfillRandomness删除即可
+        //需要对接chainlink的话把 bytes32 req = _hash();和  fulfillRandomness删除即可
         //bytes32 req = requestRandomness(_keyHash, _fee);
         bytes32 req = _hash();
 
@@ -77,6 +83,8 @@ contract ChuckALuck is VRFConsumerBase{
     }
     function fulfillRandomness(bytes32 requestId, uint256 randomness) internal override  {
         uint[] memory _roll = _expand(randomness, 3, 6, 1);
+        rolleds.push(_roll);
+
         Bet memory bet = bets[requestId];
         uint256 winMoney = calcWinner(bet, _roll);
         if(winMoney>0){

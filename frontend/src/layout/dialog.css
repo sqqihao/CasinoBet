@@ -5,5 +5,8 @@
 	line-height: 52px;
 }
 .transferDialog input,.transferDialog button{
-	margin:10px;
+	/*margin:10px;*/
+}
+.pd10{
+	padding:10px;
 }

@@ -13,6 +13,7 @@ contract Roulette is Ownable {
         uint256 bet_amounts;
     }
     Bet[] public bets;
+    uint256[] public rolleds;
 
     event PlaceBet (
         Bet bet
@@ -39,6 +40,9 @@ contract Roulette is Ownable {
     function betsLength() external view returns(uint256){
         return bets.length;
     }
+    function getRollLength() external view returns(uint256){
+        return rolleds.length;
+    }
 
     //Replace with chainlink
     function _random(uint mod) internal view returns (uint) {
@@ -47,15 +51,13 @@ contract Roulette is Ownable {
 
     function _is_red(uint roll) internal pure returns (bool) {
         if (roll < 11 || (roll > 18 && roll < 29)) {
+        // Red odd, black even
             return roll % 2 == 1;
         } else {
             return roll % 2 == 0;
         }
     }
     function calcWinner(Bet memory bet,uint256 _roll) public pure returns(uint256){
-        if (roll == 0) {
-            return 0;
-        }
         if(bet.bet_type == 0) {
             // 0 = red, 1 = black
             if (bet.bet_num == (_is_red(_roll) ? 0 : 1)) {
@@ -69,8 +71,10 @@ contract Roulette is Ownable {
         }
         return 0;
     }
+
     function play() public  onlyOwner() {
         uint256 _roll = _random(37);
+        rolleds.push(_roll);
         for(uint i=0; i<bets.length; i++) {
             uint256 winMoney = calcWinner(bets[i], _roll);
             if(winMoney>0){
@@ -83,6 +87,6 @@ contract Roulette is Ownable {
                 // emit WinFund(address(this), winMoney);
             }
         }
-        delete  bets;
+        delete bets;
     }
 }

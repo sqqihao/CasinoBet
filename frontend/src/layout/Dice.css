@@ -69,3 +69,8 @@
 	width:6px;
 	background:#796969;
 }
+.radioSelect{
+	max-width: 1000px;
+	padding:10px 10px;
+	background:#fff;
+}

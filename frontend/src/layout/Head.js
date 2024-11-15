@@ -6,13 +6,38 @@ import { WalletButton } from '@rainbow-me/rainbowkit';
 import { Button } from "antd";
 import { Modal } from "antd";
 import { Input } from "antd";
+import { Message } from "antd";
+import { message } from 'antd';
+
 import "./dialog.css"
 
 import {
   TransactionOutlined
 } from '@ant-design/icons';
 
-function Head(){
+function Head(props){
+	const deposit = props.deposit;
+	const userBalance =  parseInt(props.userBalance);
+	const refreshUserBalance =  props.refreshUserBalance;
+	const withDraw = props.withDraw;
+
+	const [withDrawInput, setWithDrawInput] = useState(1);
+	const withDrawOnchange = function(e){
+		setWithDrawInput(e.target.value);
+	}
+	const withDrawToWallet = async function(){
+		let res = await withDraw(withDrawInput)
+		console.log(res)
+		if(res.status=="success"){
+			message.success('提现成功');
+			refreshUserBalance()
+		}
+	}
+		
+	const [bankInput, setBankInput] = useState(1);
+	const bankInputChange = function(e){
+		setBankInput(e.target.value);
+	}
 	const HomeStyle = {
 		fontSize:"22px",
 		fontWeight:"bold",
@@ -24,7 +49,16 @@ function Head(){
 	const hideModal = () =>{
 		setIsModalOpen(false);	
 	}
+	async function transferToBank(){
+		//deposit
+		let res = await deposit(bankInput)
+		console.log(res)
+		if(res.status=="success"){
+			message.success('充值成功');
+			refreshUserBalance()
+		}
 
+	}
 	return (
 	    <Row>
 	      <Col className="gutter-row" sm={24} xs={24} md={6}>
@@ -36,7 +70,7 @@ function Head(){
 	      </Col>
 	      <Col className="gutter-row" sm={24} xs={24} md={6}>
 	        <div style={{paddingTop: "4px"}}>
-	        	Bank余额<span>10.0</span>
+	        	Bank余额: <span>{userBalance/(10**18)}ETH</span>
 	        	&nbsp;
 	        	&nbsp;
 	        	&nbsp;
@@ -67,7 +101,7 @@ function Head(){
 		      	
 		      </Col>
 		      <Col span={6}>
-		      	<span className="lh52">确定</span>
+		      	<span className="lh52">确认</span>
 		      </Col>
 		      <Col span={6}></Col>
 		    </Row>
@@ -77,12 +111,17 @@ function Head(){
 		      	<span className="lh52">Bank balance</span>
 		      </Col>
 		      <Col span={6}>
-		      	<Input placeholder="" />
+		      	<div className="pd10">
+		      		<Input placeholder="" onChange={bankInputChange} value={bankInput} addonAfter="ETH" />
+		      	</div>
 		      </Col>
 		      <Col span={6}>
-		      	<Button type="primary">
-	            	向Bank转账
-	            </Button>
+
+		      	<div className="pd10">
+			      	<Button type="primary" onClick={transferToBank}>
+		            	向Bank转账
+		            </Button>
+	            </div>
 		      </Col>
 		    </Row>
 
@@ -91,12 +130,17 @@ function Head(){
 		      	<span className="lh52">Bank提现至钱包</span>
 		      </Col>
 		      <Col span={6}>
-  		      	<Input placeholder="" />
+		      	<div className="pd10">
+  		      		<Input placeholder="" value={withDrawInput} onChange={withDrawOnchange} addonAfter="ETH" />
+  		      	</div>
 		      </Col>
 		      <Col span={6}>
-		      	<Button type="primary">
-		      		提现至钱包
-	            </Button>
+
+		      	<div className="pd10">
+			      	<Button type="primary" onClick={withDrawToWallet}>
+			      		提现至钱包
+		            </Button>
+		        </div>
 		      </Col>
 		    </Row>
 	      </Modal>
