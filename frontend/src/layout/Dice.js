@@ -124,9 +124,10 @@ function Dice(props){
 
 		      	<Row justify="center" className="dices-box">
 				  <List
+				  	style={{width:"100%"}}
 				    grid={{
-				      gutter: 100,
-				      column: 6,
+				      gutter: 10,
+				      column: 8,
 				    }}
 				    dataSource={betData}
 				    renderItem={(item) => <List.Item>{item}</List.Item>}

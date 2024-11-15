@@ -122,9 +122,10 @@ function Roulette(props){
 		      	</Row>
 		      	<Row justify="center" className="Roulette-box">
 				  <List
+				  	style={{width:"100%"}}
 				    grid={{
-				      gutter: 100,
-				      column: 6,
+				      gutter: 20,
+				      column: 8,
 				    }}
 				    dataSource={betData}
 				    renderItem={(item) => <List.Item>{item}</List.Item>}
