@@ -51,19 +51,19 @@ async function getLen(){
 // 	console.log(await getLen())
 // })();
 // console.log(contract.filters)
-/*
+
 contract.on("PlaceBet", async (_,c) => {
 	//console.log(1)
 	// console.log(_)
     // console.log(c); // 包含事件的详细信息
-	console.log(await getLen());
-	const tx = await contract.play();
+	console.log("新PlaceBet下注，等待公布结果:" + await getLen());
+	// const tx = await contract.play();
 	// Waits for the spin to be confirmed
-	await tx.wait();
-	console.log(await getLen());
+	// await tx.wait();
+	// console.log(await getLen());
 
 });
-*/
+
 
 function broadcast(data) {
 	console.log(`Broadcasing data to ${wss.clients.length} clients!`);
@@ -93,6 +93,7 @@ async function openBet(){
 	console.log("last roll is: " + roll);
 	return parseInt(roll);
 };
+
 let countDownTime = 0;
 setInterval(async function(){
 	countDownTime++;
