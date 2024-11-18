@@ -104,7 +104,7 @@ setInterval(async function(){
 	let roll = await openBet();
 	return broadcast({time:0,roll:roll})
 
-},4000);
+},3000);
 
 /*
 setInterval(async function(){

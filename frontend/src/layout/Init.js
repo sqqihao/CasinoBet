@@ -12,10 +12,12 @@ export function initTheme(){
 		document.querySelector("header").style.background="#4096ff"
 		document.querySelector("aside").style.background="#fff";
 		document.querySelector("main").style.background="#fff";
+    	document.querySelector("html").style.background="#fff";
 		
 	}else{
 		document.querySelector("header").style.background="#20231f"
 		document.querySelector("aside").style.background="rgb(213 211 211)";
 		document.querySelector("main").style.background="#999797";
+    	document.querySelector("html").style.background="#999797";
 	}
 }

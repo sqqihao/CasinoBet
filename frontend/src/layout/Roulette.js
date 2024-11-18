@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState,useEffect,Component } from 'react';
 import { Grid } from "antd";
 import { Col, Divider, Row } from 'antd';
 import { Button, Flex ,Card} from 'antd';
@@ -73,8 +73,15 @@ function Roulette(props){
 
 	useEffect(function(){
 		Init();
-		wsrun(addData,refreshUserBalance);
+		const {start ,stop } = wsrun(addData,refreshUserBalance);
+		start();
+
+		return () => {
+			console.log("Component will unmount");
+			stop();
+		};
 	},[])
+
 	return (
 		<div  >
 			
